@@ -19,21 +19,21 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={image} title={name} />
+      <CardMedia sx={{ height: 250 }} image={image} title={name} />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h4" component="div">
           {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body1" color="text.secondary">
           {description}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="h5" color="text.secondary">
           ${price}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Edit</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="medium">Edit</Button>
+        <Button size="medium">Favourite</Button>
       </CardActions>
     </Card>
   );

@@ -1,0 +1,17 @@
+{
+    "products": {
+      "data": {
+        "items": [
+          {
+            "id": "1",
+            "name": "Easter candy",
+            "description": "Have fun browsing our huge selection of all-natural Easter candies below! You'll find dye-free candy for your Easter egg hunt, treats to fill baskets, and gifts to send family and friends!",
+            "price": "2.99",
+            "keywords": "Easter candies",
+            "category": "Candy",
+            "subcategory": "Candy"
+          }
+        ]
+    }
+  }
+}

@@ -8,31 +8,24 @@ import Typography from "@mui/material/Typography";
 interface ProductCardProps {
   image: string;
   name: string;
-  description: string;
   price: string;
 }
-export default function ProductCard({
-  image,
-  name,
-  description,
-  price,
-}: ProductCardProps) {
+export default function ProductCard({ image, name, price }: ProductCardProps) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 250 }} image={image} title={name} />
       <CardContent>
-        <Typography gutterBottom variant="h4" component="div">
+        <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {description}
-        </Typography>
+      </CardContent>
+      <CardMedia sx={{ height: 250 }} image={image} title={name} />
+      <CardContent>
         <Typography variant="h5" color="text.secondary">
           ${price}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="medium">Edit</Button>
+      <CardActions sx={{ justifyContent: "space-between" }}>
+        <Button size="medium">Learn More</Button>
         <Button size="medium">Favourite</Button>
       </CardActions>
     </Card>

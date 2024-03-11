@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import Home from "./Pages/Home";
-import EditProduct from "./Pages/EditProduct";
+import ProductDetails from "./Pages/ProductDetails";
 import Favorites from "./Pages/Favorites";
 import AddProduct from "./Pages/AddProduct";
 import NotFound from "./Components/NotFound";
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/product/:id",
-        element: <EditProduct />,
+        element: <ProductDetails />,
       },
       {
         path: "/favourites",

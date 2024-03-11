@@ -7,9 +7,9 @@
 
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 7rem;
     flex-wrap: wrap;
-    margin-left: 170px;
+    margin-left: 120px;
     margin-top: 30px;
     margin-bottom: 50px;
 }

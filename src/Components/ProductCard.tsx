@@ -12,16 +12,16 @@ interface ProductCardProps {
 }
 export default function ProductCard({ image, name, price }: ProductCardProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, backgroundColor: "#f4e8e1" }}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" color="#6e2f22">
           {name}
         </Typography>
       </CardContent>
       <CardMedia sx={{ height: 250 }} image={image} title={name} />
       <CardContent>
-        <Typography variant="h5" color="text.secondary">
-          ${price}
+        <Typography variant="h5" color="#6e2f22">
+          <span style={{ fontFamily: "fantsy" }}>{`$${price}`}</span>
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-between" }}>

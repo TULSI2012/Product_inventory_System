@@ -1,5 +1,9 @@
-const EditProduct = () => {
-  return <div>Edit Product</div>;
-};
+import { useParams } from "react-router-dom";
 
-export default EditProduct;
+function ProductDetails() {
+  const params = useParams();
+  const id = params.id;
+  console.log(id);
+  return <div>Product Screen</div>;
+}
+export default ProductDetails;

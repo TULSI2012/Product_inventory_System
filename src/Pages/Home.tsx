@@ -10,6 +10,7 @@ const Home = () => {
         <div className="cards">
           {productsArray.map((product) => (
             <ProductCard
+              id={product.id}
               image={product.image}
               name={product.name}
               price={product.price}

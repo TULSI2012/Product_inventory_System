@@ -1,16 +1,23 @@
+import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+
 interface ProductCardProps {
   id: string;
   image: string;
   name: string;
   price: string;
 }
-export default function ProductCard({ image, name, price }: ProductCardProps) {
+export default function ProductCard({
+  id,
+  image,
+  name,
+  price,
+}: ProductCardProps) {
   return (
     <Card sx={{ maxWidth: 345, backgroundColor: "#f4e8e1" }}>
       <CardContent>
@@ -25,7 +32,9 @@ export default function ProductCard({ image, name, price }: ProductCardProps) {
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-between" }}>
-        <Button size="medium">Learn More</Button>
+        <Button component={Link} to={`/products/${id}`} size="medium">
+          Learn More
+        </Button>
         <Button size="medium">Favourite</Button>
       </CardActions>
     </Card>

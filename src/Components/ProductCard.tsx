@@ -5,6 +5,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import IconButton from "@mui/material/IconButton";
 
 interface ProductCardProps {
   id: string;
@@ -32,11 +34,18 @@ export default function ProductCard({
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-between" }}>
-        <Button component={Link} to={`/products/${id}`} size="medium">
+        <Button component={Link} to={`/product/${id}`} size="medium">
           Learn More
         </Button>
-        <Button size="medium">Favourite</Button>
+        <IconButton
+          edge="end"
+          aria-label="favoutite"
+          style={{ color: "#FFC0CB" }}
+        >
+          <FavoriteIcon sx={{ fontSize: 32 }} />
+        </IconButton>
       </CardActions>
     </Card>
   );
 }
+//<Button size="medium">Favourite</Button>

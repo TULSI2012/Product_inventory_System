@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -20,6 +21,11 @@ export default function ProductCard({
   name,
   price,
 }: ProductCardProps) {
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleFavoriteClick = () => {
+    setIsFavorited(!isFavorited);
+  };
   return (
     <Card sx={{ maxWidth: 345, backgroundColor: "#f4e8e1" }}>
       <CardContent>
@@ -40,7 +46,8 @@ export default function ProductCard({
         <IconButton
           edge="end"
           aria-label="favoutite"
-          style={{ color: "#FFC0CB" }}
+          style={{ color: isFavorited ? "#ff0252" : "#FFC0CB" }}
+          onClick={handleFavoriteClick}
         >
           <FavoriteIcon sx={{ fontSize: 32 }} />
         </IconButton>

@@ -70,7 +70,11 @@ const AddProductForm = () => {
                   }
                 }}
               />
-              <ErrorMessage name="image" component="div" />
+              <ErrorMessage
+                name="image"
+                component="div"
+                className="error-message"
+              />
             </div>
 
             <div className="form-group">

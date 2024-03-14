@@ -10,10 +10,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 export default function DenseAppBar() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
-  const handleMenuClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget as HTMLElement | null);
   };
 
   const handleMenuClose = () => {

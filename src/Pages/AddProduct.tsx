@@ -16,14 +16,16 @@ const AddProductForm = () => {
   const validationSchema = Yup.object().shape({
     productName: Yup.string().required("Product Name is required"),
     image: Yup.mixed().required("Image is required"),
-    price: Yup.number().required("Price is required"),
+    price: Yup.number()
+      .min(2, "Price must be at least $2")
+      .required("Price is required"),
     description: Yup.string().required("Description is required"),
     keyword: Yup.string().required("Keyword is required"),
     category: Yup.string().required("Category is required"),
     subcategory: Yup.string().required("Subcategory is required"),
   });
 
-  const onSubmit = (values, { resetForm }) => {
+  const onSubmit = (values: any, { resetForm }: any) => {
     // Handle form submission here, such as sending data to backend
     console.log("Form submitted with values:", values);
     resetForm();

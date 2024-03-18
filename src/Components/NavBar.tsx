@@ -46,6 +46,8 @@ export default function DenseAppBar() {
             edge="end"
             aria-label="favoutite"
             style={{ color: "#FFC0CB" }}
+            component={Link}
+            to="/favourites"
           >
             <FavoriteIcon sx={{ fontSize: 32 }} />
           </IconButton>

@@ -15,7 +15,12 @@ const AddProductForm = () => {
 
   const validationSchema = Yup.object().shape({
     productName: Yup.string().required("Product Name is required"),
-    image: Yup.mixed().required("Image is required"),
+    image: Yup.mixed()
+      .required("Image is required")
+      .test("fileFormat", "Unsupported file format", (value) => {
+        if (!value) return false;
+        return value && ["image/jpeg", "image/png"].includes(value.type);
+      }),
     price: Yup.number()
       .min(2, "Price must be at least $2")
       .required("Price is required"),

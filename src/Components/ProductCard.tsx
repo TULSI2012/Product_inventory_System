@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import IconButton from "@mui/material/IconButton";
+import { useFavoriteProducts } from "../context/FavoriteProductsContext";
 
 interface ProductCardProps {
   id: string;
@@ -21,10 +22,15 @@ export default function ProductCard({
   name,
   price,
 }: ProductCardProps) {
-  const [isFavorited, setIsFavorited] = useState(false);
+  const { isProductFavorite, addToFavorites, removeFromFavorites } =
+    useFavoriteProducts();
 
   const handleFavoriteClick = () => {
-    setIsFavorited(!isFavorited);
+    if (isProductFavorite(id)) {
+      removeFromFavorites(id);
+    } else {
+      addToFavorites(id);
+    }
   };
   return (
     <Card sx={{ maxWidth: 345, backgroundColor: "#f4e8e1" }}>
@@ -46,7 +52,7 @@ export default function ProductCard({
         <IconButton
           edge="end"
           aria-label="favoutite"
-          style={{ color: isFavorited ? "#ff0252" : "#FFC0CB" }}
+          style={{ color: isProductFavorite(id) ? "#ff0252" : "#FFC0CB" }}
           onClick={handleFavoriteClick}
         >
           <FavoriteIcon sx={{ fontSize: 32 }} />

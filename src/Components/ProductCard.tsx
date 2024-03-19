@@ -11,14 +11,14 @@ import IconButton from "@mui/material/IconButton";
 import { Product } from "./Favorites";
 
 interface ProductCardProps {
-  id: string;
+  _id: string;
   name: string;
   image: string;
   price: string;
   addToFavorites: (product: Product) => void;
 }
 export default function ProductCard({
-  id,
+  _id,
   image,
   name,
   price,
@@ -29,7 +29,7 @@ export default function ProductCard({
   const handleFavoriteClick = () => {
     setIsFavorited(!isFavorited);
     if (!isFavorited) {
-      addToFavorites({ id, image, name, price });
+      addToFavorites({ _id, image, name, price });
     }
   };
   return (
@@ -46,7 +46,7 @@ export default function ProductCard({
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-between" }}>
-        <Button component={Link} to={`/product/${id}`} size="medium">
+        <Button component={Link} to={`/product/${_id}`} size="medium">
           Learn More
         </Button>
         <IconButton

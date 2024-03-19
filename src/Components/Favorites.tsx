@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 // Assuming you have a Product.ts file or similar
 export interface Product {
-  id: string;
+  _id: string;
   name: string;
   image: string;
   price: string;
@@ -21,8 +21,8 @@ export default function FavoritePage() {
       <h1>Favorite Products</h1>
       {favoriteProducts.map((product) => (
         <ProductCard
-          key={product.id}
-          id={product.id}
+          key={product._id}
+          _id={product._id}
           name={product.name}
           image={product.image}
           price={product.price}

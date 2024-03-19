@@ -2,8 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import Home from "./Pages/Home";
 import ProductDetails from "./Pages/ProductDetails";
-import Favorites from "./Pages/Favorites";
-import { FavoriteProductsProvider } from "./context/FavoriteProductsContext";
+import Favorites from "./Components/Favorites";
 import AddProduct from "./Pages/AddProduct";
 import NotFound from "./Components/NotFound";
 import Layout from "./Components/Layout";
@@ -38,11 +37,7 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <FavoriteProductsProvider>
-      {" "}
-      {/* Wrapping with the FavoriteProductsProvider */}
-      <RouterProvider router={router} />
-    </FavoriteProductsProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );
 

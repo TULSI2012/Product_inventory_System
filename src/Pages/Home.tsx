@@ -32,7 +32,7 @@ const Home = () => {
           {products.map((product) => (
             <ProductCard
               key={product._id}
-              _id={product._id || ""}
+              _id={product._id}
               image={product.image}
               name={product.name}
               price={product.price}

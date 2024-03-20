@@ -46,9 +46,9 @@ export default function ProductCard({
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "space-between" }}>
-        <Button component={Link} to={`/product/${_id}`} size="medium">
-          Learn More
-        </Button>
+        <Link to={`product/${_id}`}>
+          <Button size="medium">Learn More</Button>
+        </Link>
         <IconButton
           edge="end"
           aria-label="favoutite"

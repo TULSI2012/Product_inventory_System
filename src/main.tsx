@@ -8,6 +8,7 @@ import NotFound from "./Components/NotFound";
 import Layout from "./Components/Layout";
 import { StrictMode } from "react";
 import App from "./App";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,9 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <div className="app">
+      <RouterProvider router={router} />
+    </div>
   </StrictMode>
 );
 

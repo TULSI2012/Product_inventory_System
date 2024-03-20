@@ -1,6 +1,12 @@
 *{
         box-sizing: border-box;
-        margin: 0cm;
-        padding: 0cm;
+        margin: 0px;
+        padding: 0px;
     }
+
+    .app {
+        background-color: #e8d8a6;
+
+    }
+
 

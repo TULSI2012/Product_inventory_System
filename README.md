@@ -32,5 +32,5 @@ This project is a Product Inventory Management System built using React, TypeScr
 
 ## Credits 🙏
 
-This project was created by [Your Name] and is licensed under the [MIT License](LICENSE).
+This project was created by Tulsi Kalola
 
